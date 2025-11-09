@@ -5,7 +5,7 @@
 // logic, including selecting items, handling correct/incorrect answers,
 // managing transitions, and displaying feedback to the user.
 
-import React, { useState, useEffect, useCallback, FC } from "react";
+import { useState, useEffect, useCallback, FC } from "react";
 import { useLearningContext } from "../context/LearningContext";
 import { LearningItem } from "../types";
 import PopTheBubbleGame from "./PopTheBubbleGame";

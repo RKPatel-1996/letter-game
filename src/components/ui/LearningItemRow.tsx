@@ -5,9 +5,9 @@
 // learning item (letter/number) and provides buttons for the parent
 // to set its learning status (struggling, not-practiced, learned).
 
-import React, { FC } from 'react';
-import { LearningItem, LearningStatus } from '../../types';
-import { useLearningContext } from '../../context/LearningContext';
+import { FC } from "react";
+import { LearningItem, LearningStatus } from "../../types";
+import { useLearningContext } from "../../context/LearningContext";
 
 interface LearningItemRowProps {
   item: LearningItem;
@@ -35,7 +35,7 @@ const LearningItemRow: FC<LearningItemRowProps> = ({ item }) => {
       }[status];
       return `${base} ${activeClasses}`;
     }
-    
+
     return `${base} bg-gray-200 text-gray-500 hover:bg-gray-300`;
   };
 
