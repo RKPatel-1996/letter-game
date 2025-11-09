@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AlphaPlay</title>
+    <style>
+      /* Custom keyframes for the floating animation */
+      @keyframes float {
+        0% {
+          transform: translate(0px, 0px);
+        }
+        50% {
+          transform: translate(15px, -40px);
+        }
+        100% {
+          transform: translate(0px, 0px);
+        }
+      }
+      .animate-float {
+        animation: float ease-in-out infinite;
+      }
+
+      /* Custom keyframes for the pop animation */
+      @keyframes pop {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(0);
+          opacity: 0;
+        }
+      }
+      .animate-pop-bubble {
+        animation: pop 0.3s ease-out forwards;
+      }
+
+      /* Custom keyframes for the falling letter */
+      @keyframes fall {
+          0% {
+            transform: translateY(0) rotate(0deg);
+            opacity: 1;
+          }
+          100% {
+            transform: translateY(80vh) rotate(360deg);
+            opacity: 0;
+          }
+      }
+      .animate-fall {
+        animation: fall 1.5s ease-in forwards;
+      }
+
+      /* Custom keyframes for feedback icons */
+       @keyframes fade-in-out {
+          0%, 100% {
+            opacity: 0;
+            transform: scale(0.8);
+          }
+          20%, 80% {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+        .animate-feedback {
+          animation: fade-in-out 2s ease-in-out forwards;
+        }
+      
+      /* Custom keyframes for collected items */
+      @keyframes fade-in-quick {
+        from {
+          opacity: 0;
+          transform: scale(0.5);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      .animate-fade-in-quick {
+        animation: fade-in-quick 0.4s ease-out forwards;
+      }
+
+      /* Keyframes for background bubbles */
+      @keyframes rise {
+        0% {
+            transform: translateY(0);
+            opacity: 0.3;
+        }
+        100% {
+            transform: translateY(-120vh);
+            opacity: 0;
+        }
+      }
+      .animate-rise {
+          animation: rise linear infinite;
+      }
+
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "vite": "https://aistudiocdn.com/vite@^7.2.2",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
